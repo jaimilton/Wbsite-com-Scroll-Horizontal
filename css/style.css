@@ -1,0 +1,73 @@
+/* Site SnapScroll com scroll Horizontal */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    
+}
+
+section{
+    flex: none;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    
+}
+
+.container section:nth-child(1){
+    background-color: rgb(28, 28, 28);
+    color: green;
+    
+}
+.container section:nth-child(2){
+    background-color: rgb(38, 38, 38);
+    color: yellow;
+}
+.container section:nth-child(3){
+    background-color: rgb(48, 48, 48);
+    color: blue;
+}
+.container section:nth-child(4){
+    background-color: rgb(58, 58, 58);
+    color: red;
+}
+.container section:nth-child(5){
+    background-color: rgb(68, 68, 68);
+    color: rebeccapurple;
+}
+
+/* container para inverter o scroll da pagina para Horizontal  */
+
+.ext-container{ 
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: y mandatory;
+
+    
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
